@@ -7,7 +7,7 @@ ARG USER_HOME_DIR="/root"
 
 
 RUN apt-get update
-RUN apt-get install -y openjdk-8
+RUN apt-get install -y openjdk-8-jdk
 RUN mvn clean install
 RUN mvn test =Dtest="CreateBooking"
 
