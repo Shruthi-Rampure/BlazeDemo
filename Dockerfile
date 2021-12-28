@@ -7,6 +7,6 @@ RUN wget http://mirror.olnevhost.net/pub/apache/maven/binaries/apache-maven-3.2.
  && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable_current_amd64.deb
+RUN apt install ./google-chrome-stable_current_amd64.deb
 
 
