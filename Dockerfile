@@ -7,9 +7,7 @@ ARG USER_HOME_DIR="/root"
 
 
 RUN apt-get update
-RUN apt-get install -y openjdk-8-jdk
-RUN mvn clean install
-RUN mvn test =Dtest="CreateBooking"
+
 
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
  && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz \
@@ -28,3 +26,6 @@ ENV JAVA_HOME /usr/lib/jvm/default-jvm/
 
 # Define default command.
 CMD ["mvn", "--version"]
+RUN apt-get install -y openjdk-8-jdk
+RUN mvn clean install
+RUN mvn test =Dtest="CreateBooking"
