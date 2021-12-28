@@ -3,21 +3,21 @@ BlazeDemo_Assesment
 
 Web UI and API Automation with Selenium 
 
-Table of Contents
+**Table of Contents**
   There are a few things we need before running the tests. These are:
-  1. Java Installation / Update
-  2. Setting up Eclipse
+  _1. Java Installation / Update_
+_  2. Setting up Eclipse_
 
 	Installing TestNG
 	Setting up Maven
-  3. Running the Project
+_  3. Running the Project_
 
 	From Eclipse
 	From Terminal
-  4. Technologies Used 
-  5. Project Contents
+_  4. Technologies Used _
+ _ 5. Project Contents_
 	
-Java Installation / Update
+**Java Installation / Update**
 Check your system to see if you have the latest Java version installed.
 
 Command:
@@ -26,15 +26,15 @@ $ java -version
 
 Ensure your JAVA_HOME environment to the location of the installed JDK
 
-Setting up Eclipse
+**Setting up Eclipse**
 Navigate to the Eclipse download page and download eclipse for Java EE developers.
-Installing TestNG
+**Installing TestNG**
 Installing a Plugin:
 
 Inside Eclipse, click on the Help menu
 Select TestNG from Eclipse MarketPlace.
 
-Setting up Maven
+**Setting up Maven**
 1. Download Maven
 
 2. Unzip the distribution archive to the directory you wish to install Maven. I extracted maven to my Documents folder
@@ -51,12 +51,12 @@ $ source ~/.bash_profile
 $ mvn –version
 Maven dependencies are crucial to running any Maven project.
 
-Technologies Used 
+**Technologies Used **
 1. Java
 2. Selenium
 3. TestNG
 
-Project Contents
+**Project Contents**
 1. Clone this project.
 2. Setup the project in Eclipse.
 3. Change the URL in basetest to launch specific URL.
