@@ -35,9 +35,10 @@ public class BasePage {
 		Thread.sleep(4000);
 		selObj.click();
 		Assert.assertTrue(true, "Element click succesfully"+selObj);
-		}else{
-		Assert.assertFalse(false, "Element click Failed "+selObj);
 		}
+	else{
+		Assert.assertFalse(false, "Element click NOT succesfully"+selObj);	
+	}
 	}
 	catch(Exception e){
 		System.out.println("erorr occurred-----------------------" + e);
@@ -61,9 +62,10 @@ public class BasePage {
 	Thread.sleep(3000);
 	if(selObj.isDisplayed()){
 		Assert.assertTrue(true, "Header present "+selObj);
-		}else{
-		Assert.assertFalse(false, "Header NOT present "+selObj);
 		}
+	else{
+		Assert.assertFalse(false, "Header NOT present "+selObj);	
+	}
 	}
 	catch(Exception e){
 		System.out.println("erorr occurred-----------------------" + e);
