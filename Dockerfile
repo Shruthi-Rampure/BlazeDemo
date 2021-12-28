@@ -1,14 +1,10 @@
 FROM ubuntu:14.04 
 
 USER root
+RUN wget http://mirror.olnevhost.net/pub/apache/maven/binaries/apache-maven-3.2.1-bin.tar.gz
+tar zxf apache-maven-3.2.1-bin.tar.gz
 
-docker run -it --rm \
-       -v "$(pwd)":/opt/maven \
-       -w /opt/maven \
-       maven:3.2-jdk-7 \
-       mvn clean install
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
 
-# Define default command.
-CMD ["mvn", "--version"]
 
-RUN mvn test =Dtest="CreateBooking"
