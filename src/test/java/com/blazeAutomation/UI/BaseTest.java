@@ -1,10 +1,5 @@
 package com.blazeAutomation.UI;
 
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -16,11 +11,12 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 
+
 public class BaseTest {
 	
 	public WebDriver d;
 	public WebDriverWait wait;
-	private ReadPropertyFile conf;
+	//private ReadPropertyFile conf;
 	protected String url;
 	
 	@BeforeClass
@@ -30,16 +26,16 @@ public class BaseTest {
 		Assert.assertTrue(true, "Application launch succesfully");
 		}
 		catch(Exception e ){
-			Assert.fail("Application launch failed", e);
+			System.out.println("erorr occurred-----------------------" + e);
 			e.getStackTrace();	
 		}
 	}
 	
 
-@AfterClass
-public void closeDriver() throws InterruptedException{
+	@AfterClass
+	public void closeDriver() throws InterruptedException{
 	closeChrome();
-}
+	}
 
 public void launchApp()
 {

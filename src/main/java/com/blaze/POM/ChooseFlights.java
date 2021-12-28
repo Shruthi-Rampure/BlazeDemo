@@ -1,11 +1,8 @@
 package com.blaze.POM;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -40,7 +37,7 @@ public class ChooseFlights extends BasePage{
 		Assert.assertTrue(true, "Succesfully navigated to purhase flight page");
 		}
 		catch(Exception e ){
-		Assert.fail("Step failed on choosing flights", e);
+			System.out.println("erorr occurred-----------------------" + e);
 		e.getStackTrace();
 		}
 	}

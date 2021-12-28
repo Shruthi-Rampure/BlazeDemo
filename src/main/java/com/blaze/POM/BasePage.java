@@ -1,13 +1,11 @@
 package com.blaze.POM;
 
 
-import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -38,11 +36,11 @@ public class BasePage {
 		selObj.click();
 		Assert.assertTrue(true, "Element click succesfully"+selObj);
 		}else{
-		Assert.fail("Element click Failed "+selObj);
+		Assert.assertFalse(false, "Element click Failed "+selObj);
 		}
 	}
-	catch(WebDriverException e){
-		Assert.fail("Error Occured ", e);	
+	catch(Exception e){
+		System.out.println("erorr occurred-----------------------" + e);
 	}
 	}
 	
@@ -53,8 +51,8 @@ public class BasePage {
 	sel.selectByVisibleText(selString);
 	Assert.assertTrue(true, "Drop down selected succesfully"+selString);
 	}
-	catch(WebDriverException e){
-		Assert.fail("Application launch failed", e);
+	catch(Exception e){
+		System.out.println("erorr occurred-----------------------" + e);
 	}
 	}
 	
@@ -64,11 +62,11 @@ public class BasePage {
 	if(selObj.isDisplayed()){
 		Assert.assertTrue(true, "Header present "+selObj);
 		}else{
-		Assert.fail("Header NOT present "+selObj);
+		Assert.assertFalse(false, "Header NOT present "+selObj);
 		}
 	}
-	catch(WebDriverException e){
-		Assert.fail("Header NOT present", e);
+	catch(Exception e){
+		System.out.println("erorr occurred-----------------------" + e);
 	}
 	}
 	
@@ -79,8 +77,8 @@ public class BasePage {
 		selObj.sendKeys(txt);
 
 	}
-	catch(WebDriverException e){
-		Assert.fail("Header NOT present", e);
+	catch(Exception e){
+		System.out.println("erorr occurred-----------------------" + e);
 	}
 	}
 	

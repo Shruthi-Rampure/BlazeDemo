@@ -1,11 +1,8 @@
 package com.blaze.POM;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -87,7 +84,7 @@ public class WelcomePage extends BasePage{
 		Assert.assertTrue(true, "Welcome page is displayed succesfully");
 		}
 		catch(Exception e ){
-			Assert.fail("Welcome page launch failed", e);
+			System.out.println("erorr occurred-----------------------" + e);
 		}
 	}
 	
@@ -104,7 +101,7 @@ public class WelcomePage extends BasePage{
 		Assert.assertTrue(true, "Choose departure and destination succesfully");
 		}
 		catch(Exception e ){
-		Assert.fail("Step failed on choosing destination and departure flight", e);
+			System.out.println("erorr occurred-----------------------" + e);
 		e.getStackTrace();
 		}
 	}
@@ -119,7 +116,7 @@ public class WelcomePage extends BasePage{
 		Assert.assertTrue(true, "Succesfully navigated to purhase flight page");
 		}
 		catch(Exception e ){
-		Assert.fail("Step failed on choosing flights", e);
+			System.out.println("erorr occurred-----------------------" + e);
 		e.getStackTrace();
 		}
 	}
@@ -154,7 +151,7 @@ public class WelcomePage extends BasePage{
 		Assert.assertTrue(true, "Flight booking confirmed, Confirmation ID is"+confirmID);
 		}
 		catch(Exception e ){
-		Assert.fail("Error occured ", e);
+		System.out.println("erorr occurred-----------------------" + e);
 		e.getStackTrace();
 		}
 	}
