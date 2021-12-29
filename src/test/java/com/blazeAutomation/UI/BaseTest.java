@@ -41,7 +41,7 @@ public class BaseTest {
 public void launchApp()
 {
 	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Shruthi Rampure\\workspace\\BlazeDemo\\BrowserSpecificDriver\\chromedriver.exe");
-	System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+ "//BrowserSpecificDriver//chromedriver.exe");
+	//System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+ "//BrowserSpecificDriver//chromedriver.exe");
 	ChromeOptions options = new ChromeOptions();
 	options.addArguments("--disable-extensions");
 	options.addArguments("--headless");
