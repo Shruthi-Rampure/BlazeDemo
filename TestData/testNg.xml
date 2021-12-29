@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BlazeDemo" verbose="10" parallel = "classes">
+	<test name="Tests">
+		<!-- List individual packages to execute below -->
+		<packages>
+			<package name="com.blazeAutomation.UI.*" />
+		</packages>
+	</test>
+</suite>
