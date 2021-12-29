@@ -91,7 +91,7 @@
        						<testFailureIgnore>true</testFailureIgnore>
    					 </configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+						<suiteXmlFile>TestData/testNg.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>				
 			</plugin>
