@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class BaseTest {
@@ -22,6 +22,7 @@ public class BaseTest {
 	@BeforeClass
 	public void launchApplication() throws InterruptedException{
 		try{
+		startDriver();
 		launchApp();
 		Assert.assertTrue(true, "Application launch succesfully");
 		}
@@ -51,6 +52,10 @@ public void launchApp()
 	d.get("https://blazedemo.com/");
 	d.manage().window().maximize();
 	d.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+}
+
+private void startDriver() {
+        WebDriverManager.chromedriver().setup();  
 }
 
 public void closeChrome() throws InterruptedException
