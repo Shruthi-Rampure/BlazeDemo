@@ -4,6 +4,7 @@
 		<!-- List individual packages to execute below -->
 		<packages>
 			<package name="com.blazeAutomation.UI.*" />
+			<package name="com.blazeAutomation.API.*" />
 		</packages>
 	</test>
 </suite>
